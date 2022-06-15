@@ -1,0 +1,4 @@
+{
+  "baseUrl": "https://api.tmsandbox.co.nz",
+  "categoriesUrl": "/v1/Categories/@categoryId/Details.json?catalogue=@isCatalogue"
+}

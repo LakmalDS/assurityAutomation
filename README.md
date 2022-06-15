@@ -9,7 +9,7 @@ This project contains the API test for Assurity request for further information.
 * Git
 
 ###File Structure
-* ![img.png](img.png)
+![img.png](img.png)
 
 ###File/Directory Content
 * ApiConfigsReader - This class reads the json file containing the url content of the api request.

@@ -20,16 +20,12 @@ public class CategoriesResponseTest {
 
     @Test
     public void verifyGetCategoriesResponse() throws IOException, ParseException {
-        String categoryName = "Carbon credits";
-        String promoName = "Gallery";
-        String promoDescription = "Good position in category";
-
         CategoriesDTO response = methods.getCategoriesResponse(6327, false);
 
-        Assert.assertTrue(response.getName().equalsIgnoreCase(categoryName), "Category Name is incorrect");
+        Assert.assertTrue(response.getName().equalsIgnoreCase("Carbon credits"), "Category Name is incorrect");
         Assert.assertTrue(response.getCanRelist(), "CanRelist value is incorrect");
-        Assert.assertTrue(getPromotionDescription(response.getPromotions(), promoName).equalsIgnoreCase(promoDescription),
-                "Promotion does not have expected Description");
+        Assert.assertTrue(getPromotionDescription(response.getPromotions(), "Gallery")
+                        .equalsIgnoreCase("Good position in category"),"Promotion does not have expected Description");
     }
 
     private String getPromotionDescription(List<PromotionsDTO> promotions, String promoName) {

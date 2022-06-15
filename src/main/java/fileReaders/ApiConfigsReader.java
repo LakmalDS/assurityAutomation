@@ -14,7 +14,12 @@ public class ApiConfigsReader {
     private Object object;
     private final String jsonFilePath = "src//main//resources//apiConfigs.json";
 
-
+    /**
+     * Value in the provided json file is read. The value is then parsed
+     * and the content outputted as a json object.
+     * @throws IOException
+     * @throws ParseException
+     */
     public ApiConfigsReader() throws IOException, ParseException {
         fileReader = new FileReader(jsonFilePath);
         jsonParser = new JSONParser();
@@ -23,6 +28,10 @@ public class ApiConfigsReader {
         fileReader.close();
     }
 
+    /**
+     * Get method allows you to access only the required url content
+     * @return
+     */
     public String getBaseUrl() {
         return (String) jsonObject.get("baseUrl");
     }

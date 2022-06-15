@@ -28,6 +28,14 @@ public class CategoriesResponseTest {
                         .equalsIgnoreCase("Good position in category"),"Promotion does not have expected Description");
     }
 
+    /**
+     * List of promotions is perused until the promotion with the specified name is found.
+     * Description of that promotion is returned to the test.
+     * If Promotion list is empty, an empty string is returned.
+     * @param promotions
+     * @param promoName
+     * @return
+     */
     private String getPromotionDescription(List<PromotionsDTO> promotions, String promoName) {
         String description = "";
         if (promotions.isEmpty()) { return description; }
